@@ -1,0 +1,9 @@
+{
+  "name": "fundi",
+  "version": "0.1.0",
+  "description": "Dependency injection in functional way",
+  "main": "index.js",
+  "repository": "https://github.com/kst404/fundi.git",
+  "author": "Kst <kst404@gmail.com>",
+  "license": "MIT"
+}
