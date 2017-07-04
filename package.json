@@ -9,6 +9,18 @@
   "license": "MIT",
   "babel": {
     "env": {
+      "test": {
+        "presets": [
+          [
+            "env",
+            {
+              "targets": {
+                "node": "current"
+              }
+            }
+          ]
+        ]
+      },
       "commonjs": {
         "presets": [
           [
@@ -38,9 +50,9 @@
     }
   },
   "scripts": {
-    "build": "yarn run build:commonjs && yarn run build:es",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel --ignore __test__ src --out-dir lib",
     "build:es": "cross-env BABEL_ENV=es babel --ignore __test__ src --out-dir es",
+    "build": "yarn run build:commonjs && yarn run build:es",
     "prepublish": "npm run build",
     "test": "jest --env=node --watch"
   },
